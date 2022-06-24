@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/panel_img_iv"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_first_album_default"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/home_pannel_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="밤 하늘과 센티한 알앤비\n음악"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="75dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/panel_img_iv"/>
+
+    <ImageView
+        android:id="@+id/home_pannel_btn_play_iv"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/btn_panel_play_large"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/panel_img_iv"/>
+
+    <TextView
+        android:id="@+id/home_pannel_album_info_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="총 36곡 2020.06.05"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/home_pannel_album_ll"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/home_pannel_album_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/home_pannel_album_ll">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pannel_album_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="2dp">
+
+            <ImageView
+                android:id="@+id/home_pannel_album_img_iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_album_exp"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp">
+
+            <TextView
+                android:id="@+id/home_pannel_album_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In My Bed"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/home_pannel_album_singer_tv"
+                app:layout_constraintStart_toEndOf="@+id/pannel_album_img"
+                app:layout_constraintTop_toTopOf="@+id/pannel_album_img"/>
+
+            <TextView
+                android:id="@+id/home_pannel_album_singer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bear"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/home_pannel_album_title_tv"
+                app:layout_constraintStart_toEndOf="@id/pannel_album_img"
+                app:layout_constraintBottom_toBottomOf="@id/pannel_album_img"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/home_pannel_album_ll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_pannel_album_ll"
+        app:layout_constraintBottom_toBottomOf="@id/panel_img_iv">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pannel_album_img2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="2dp">
+
+            <ImageView
+                android:id="@+id/home_pannel_album_img_iv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_album_exp"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp">
+
+            <TextView
+                android:id="@+id/home_pannel_album_title_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="In My Bed"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/home_pannel_album_singer_tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bear"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
